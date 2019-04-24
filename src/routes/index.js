@@ -7,8 +7,12 @@ import JobsView from '../views/JobsView.vue'
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
+      path: '/',
+      redirect : '/news',
+    },{
       path: '/news', //path : url 주소
       component : NewsView, // component : url 주소로 갔을 때 표시될 컴포넌트
     },{
