@@ -6,6 +6,7 @@ import JobsView from '../views/JobsView.vue'
 
 Vue.use(VueRouter);
 
+
 export const router = new VueRouter({
   mode: 'history',
   routes: [
