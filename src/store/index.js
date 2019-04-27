@@ -22,31 +22,31 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    FETCH_NEWS(context){
+    FETCH_NEWS({ commit }){
       fetchNewsList()
-        .then(response => {
-          console.log(response);
-          context.commit('SET_NEWS', response.data);
+        .then(({ data }) => {
+          commit('SET_NEWS', data);
         })
         .catch(error => {
-            console.log(error);
+            console.error(error);
         })
     },
-    FETCH_JOBS(context){
+    FETCH_JOBS({ commit }){
       fetchJobsList()
-        .then(response => {
-          console.log(response);
-          context.commit('SET_JOBS', response.data);
+        .then(({ data }) => {
+          commit('SET_JOBS', data);
         })
         .catch(error => {
-          console.log(error);
+          console.error(error);
         })
     },
-    FETCH_ASKS(context){
+    FETCH_ASKS({ commit }){
       fetchAskList()
-        .then( response => {
-          console.log(response);
-          context.commit('SET_ASKS', response.data);
+        .then( ({ data }) => {
+          commit('SET_ASKS', data);
+        })
+        .catch(error =>{
+          console.error(error);
         })
     }
   }
