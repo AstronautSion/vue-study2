@@ -23,6 +23,5 @@ export const router = new VueRouter({
       path: '/jobs',
       component : JobsView,
     },
-
   ]
 });
